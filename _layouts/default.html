@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+          <p class="view"><a href="https://github.com/alexa-pi/AlexaPi">AlexaPi on GitHub</a></p>
+          <p class="view"><a href="{{ site.github.repository_url }}">This Project on GitHub</a></p>
+
+      </header>
+      <section>
+        <a id="back" href="javascript:history.back();" style="font-size: 45px;">&#8617;</a> 
+        <a id="home" href="/AlexaPi-config/" style="font-size: 45px;">&#127968;</a>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>Project created by <a href="https://github.com/EmerickH">Emerick_H</a> for AlexaPi</p>
+        {% endif %}
+        <p><small>Theme modified by <a href="https://github.com/EmerickH">Emerick_H</a>, based on a project created by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <script>
+     if (window.location.pathname == '/AlexaPi-config/')
+       document.getElementById("back").style.display = "none";
+    </script>
+  </body>
+</html>
