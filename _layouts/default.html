@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ site.title | default: site.github.repository_name }}</title>
-
+    
+    <script src="//twemoji.maxcdn.com/2/twemoji.min.js?11.0"></script>
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
@@ -39,6 +40,17 @@
     <script>
      if (window.location.pathname == '/AlexaPi-config/')
        document.getElementById("back").style.display = "none";
+     
+     twemoji.parse(document.body, {
+          callback: function(icon, options, variant) {
+                        return ''.concat(options.base, options.size, '/', icon, options.ext);
+                    },
+          attributes: function attributesCallback(icon, variant) {
+                        return {
+                          height: '24'
+                        };
+                      }
+     });
     </script>
   </body>
 </html>

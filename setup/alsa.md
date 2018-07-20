@@ -1,4 +1,4 @@
-# Alsa setup
+# 🅰 Alsa setup
 
 ## Find your devices
 
@@ -19,14 +19,15 @@ Same thing for input device but with this command:
 arecord -L
 ```
 
-With some USB mics, you may have to use something like `USB PnP Sound Device: Audio (plughw:1,0)` instead of `plughw:CARD=XXXX,DEV=X`
+ℹ *With some USB mics, you may have to use something like `USB PnP Sound Device: Audio (plughw:1,0)` instead of `plughw:CARD=XXXX,DEV=X`*
 
 ## Edit AlexaPi's config
 
 ### Locate config
 
 The default AlexaPi's config emplacement is `/etc/opt/AlexaPi/config.yaml` or in the same folder as AlexaPi.
-If there's no `config.yaml`, create it:
+
+🚫 *If there's no `config.yaml`, create it:*
 ```
 sudo cp -n /etc/opt/AlexaPi/src/config.template.yaml /etc/opt/AlexaPi/config.yaml
 ```

@@ -1,4 +1,4 @@
-# Pulse setup
+# 🇵 Pulse setup
 
 First, make shure PulseAudio is installed:
 ```
@@ -10,7 +10,8 @@ sudo apt install pulseaudio
 ### Locate config
 
 The default AlexaPi's config emplacement is `/etc/opt/AlexaPi/config.yaml` or in the same folder as AlexaPi.
-If there's no `config.yaml`, create it:
+
+🚫 *If there's no `config.yaml`, create it:*
 ```
 sudo cp /opt/AlexaPi/src/config.template.yaml /etc/opt/AlexaPi/config.yaml
 ```
@@ -29,7 +30,7 @@ and change theses lines with your input and output devices:
   output: "pulse"
   output_device: ""
 ```
-#### With SoX
+#### With SoX (if VLC is not working or for Rapberry ![R](rasp.png))
 ```
   input_device: "pulse"
   output: "pulseaudio"
